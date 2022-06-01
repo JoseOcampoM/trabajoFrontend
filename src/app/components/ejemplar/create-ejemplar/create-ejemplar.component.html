@@ -1,0 +1,15 @@
+<div class="container">
+    <form [formGroup]="formulario" novalidate (ngSubmit)="onSubmit()">
+
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Localizacion</mat-label>
+                <input matInput placeholder="localizacion" formControlName="localizacion" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <button type="submit" mat-raised-button color="primary" [disabled]="formulario.invalid">Guardar Datos</button>
+        </div>
+    </form>
+</div>
+
