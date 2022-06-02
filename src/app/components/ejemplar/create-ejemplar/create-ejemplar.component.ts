@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar'
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { EjemplarI } from 'src/app/models/ejemplar';
 import { EjemplarService } from 'src/app/services/ejemplar.service';
 
@@ -14,6 +14,7 @@ export class CreateEjemplarComponent implements OnInit {
   public formulario: FormGroup = this.formBuilder.group(
     {
       localizacion: ['', [Validators.required]],
+      LibroId: ['', [Validators.required]],
     }
   )
   constructor(

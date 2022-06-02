@@ -1,0 +1,44 @@
+<div>
+    <button mat-icon-button color="primary" a routerLink="/libroCreate" aria-label="Example icon button with a vertical three dot icon">Agregar Nuevo
+    </button>
+  </div>
+  
+  <table mat-table [dataSource]="libros" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="titulo">
+        <th mat-header-cell *matHeaderCellDef> Titulo </th>
+        <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+      </ng-container>
+      <ng-container matColumnDef="numero_pagina">
+        <th mat-header-cell *matHeaderCellDef> Numero de Paginas </th>
+        <td mat-cell *matCellDef="let element"> {{element.numero_pagina}} </td>
+      </ng-container>
+      <ng-container matColumnDef="editorial">
+        <th mat-header-cell *matHeaderCellDef> editorial </th>
+        <td mat-cell *matCellDef="let element"> {{element.editorial}} </td>
+      </ng-container>
+      <ng-container matColumnDef="isbn">
+        <th mat-header-cell *matHeaderCellDef> Isbn </th>
+        <td mat-cell *matCellDef="let element"> {{element.isbn}} </td>
+      </ng-container>
+      <ng-container matColumnDef="AutorId">
+        <th mat-header-cell *matHeaderCellDef> Autor </th>
+        <td mat-cell *matCellDef="let element"> {{element.Autor.nombre}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones.</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>

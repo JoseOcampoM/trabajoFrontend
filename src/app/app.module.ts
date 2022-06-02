@@ -19,6 +19,10 @@ import { ListEjemplarComponent } from './components/ejemplar/list-ejemplar/list-
 import { CreateEjemplarComponent } from './components/ejemplar/create-ejemplar/create-ejemplar.component';
 import { ListPrestamoComponent } from './components/prestamo/list-prestamo/list-prestamo.component';
 import { CreatePrestamoComponent } from './components/prestamo/create-prestamo/create-prestamo.component';
+import { ListLibroComponent } from './components/libro/list-libro/list-libro.component';
+import { ListAutorComponent } from './components/autor/list-autor/list-autor.component';
+import { CreateAutorComponent } from './components/autor/create-autor/create-autor.component';
+import { CreateLibroComponent } from './components/libro/create-libro/create-libro.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { CreatePrestamoComponent } from './components/prestamo/create-prestamo/c
     ListEjemplarComponent,
     CreateEjemplarComponent,
     ListPrestamoComponent,
-    CreatePrestamoComponent
+    CreatePrestamoComponent,
+    ListLibroComponent,
+    ListAutorComponent,
+    CreateAutorComponent,
+    CreateLibroComponent
   ],
   imports: [
     BrowserModule,

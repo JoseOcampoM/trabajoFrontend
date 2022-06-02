@@ -11,7 +11,7 @@ import { EjemplarService } from 'src/app/services/ejemplar.service';
 })
 export class ListEjemplarComponent implements OnInit {
   public ejemplares: EjemplarI[] = []
-  public displayedColumns: string[] = ["localizacion", "Acciones"]
+  public displayedColumns: string[] = ["id", "localizacion", "LibroId", "Acciones"]
   constructor(
     private ejemplarService: EjemplarService,
     private router: Router

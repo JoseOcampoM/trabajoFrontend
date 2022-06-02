@@ -1,1 +1,37 @@
-<p>list-prestamo works!</p>
+<div>
+    <button mat-icon-button color="primary" a routerLink="/prestamoCreate" aria-label="Example icon button with a vertical three dot icon">Agregar Nuevo
+    </button>
+  </div>
+  
+  <table mat-table [dataSource]="prestamos" class="mat-elevation-z8">
+      <ng-container matColumnDef="UsuarioId">
+        <th mat-header-cell *matHeaderCellDef> Usuario ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.UsuarioId}} </td>
+      </ng-container>
+      <ng-container matColumnDef="EjemplarId">
+        <th mat-header-cell *matHeaderCellDef> Ejemplar Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.EjemplarId}} </td>
+      </ng-container>
+      <ng-container matColumnDef="fechaDev">
+        <th mat-header-cell *matHeaderCellDef> fecha de Devolucion </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaDev}} </td>
+      </ng-container>
+      <ng-container matColumnDef="fechapres">
+        <th mat-header-cell *matHeaderCellDef> fecha de Prestamo </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechapres}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones.</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+

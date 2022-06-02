@@ -7,7 +7,7 @@ import { EjemplarI } from '../models/ejemplar';
   providedIn: 'root'
 })
 export class EjemplarService {
-  api_uri = 'http://localhost:4000';
+  api_uri = 'http://localhost:4001';
   constructor(
     private http:HttpClient
   ) { }

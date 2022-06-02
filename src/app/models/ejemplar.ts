@@ -1,5 +1,6 @@
 export interface EjemplarI {
-    // libroId: number;
+    id?: number;
     localizacion: string;
+    libroId: number;
     activo: Boolean;
 }
