@@ -1,1 +1,44 @@
-<p>create-libro works!</p>
+<div class="container">
+    <form [formGroup]="formulario" novalidate (ngSubmit)="onSubmit()">
+
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Id</mat-label>
+                <input matInput placeholder="id" formControlName="id" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>titulo</mat-label>
+                <input matInput placeholder="titulo" formControlName="titulo" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Numero de Paginas</mat-label>
+                <input matInput placeholder="numero_pagina" formControlName="numero_pagina" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Editorial</mat-label>
+                <input matInput placeholder="editorial" formControlName="editorial" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Isbn</mat-label>
+                <input matInput placeholder="isbn" formControlName="isbn" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>AutorId</mat-label>
+                <input matInput placeholder="AutorId" formControlName="AutorId" required>
+              </mat-form-field>
+        </div>
+        <div>
+            <button type="submit" mat-raised-button color="primary" [disabled]="formulario.invalid">Guardar Datos</button>
+        </div>
+    </form>
+</div>
